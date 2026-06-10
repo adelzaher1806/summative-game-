@@ -111,7 +111,7 @@ const MenuButton: React.FC<{
 }> = ({ onClick, children, variant = 'secondary', disabled = false }) => {
     const baseClasses = "px-8 py-3 font-bold text-lg rounded-full transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-jersey backdrop-blur-md border";
     const variantClasses = {
-        primary: "bg-green-500/20 hover:bg-green-500/30 text-green-300 border-green-400/50 hover:border-green-400 hover:shadow-[0_0_20px_rgba(74,222,128,0.6)]",
+        primary: "bg-red-500/20 hover:bg-red-500/30 text-red-300 border-red-400/50 hover:border-red-400 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)]",
         secondary: "bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50",
         danger: "bg-red-600/20 hover:bg-red-600/30 text-red-300 border-red-400/50 hover:border-red-400"
     };
@@ -213,7 +213,7 @@ const KeybindEditor: React.FC<{
                         </div>
                         <button
                             onClick={handleSave}
-                            className="px-2 py-1 bg-green-500/20 hover:bg-green-500/30 text-green-300 border border-green-400/50 hover:border-green-400 text-xs rounded font-jersey backdrop-blur-md"
+                            className="px-2 py-1 bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-400/50 hover:border-red-400 text-xs rounded font-jersey backdrop-blur-md"
                         >
                             ✓
                         </button>
@@ -271,8 +271,8 @@ const MainMenu: React.FC = () => {
                 <span className="text-yellow-400 font-bold">{coins}</span>
             </div>
 
-            <div className="text-center space-y-8 p-12 border border-green-500/30 rounded-2xl bg-black/50 shadow-[0_0_50px_rgba(0,255,100,0.1)] backdrop-blur-sm z-10">
-                <h1 className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600 italic tracking-tighter drop-shadow-sm">
+            <div className="text-center space-y-8 p-12 border border-red-500/30 rounded-2xl bg-black/50 shadow-[0_0_50px_rgba(239,68,68,0.1)] backdrop-blur-sm z-10">
+                <h1 className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 italic tracking-tighter drop-shadow-sm">
                     ASKEW
                 </h1>
 
@@ -315,7 +315,7 @@ const PlayingHUD: React.FC = () => {
 
                 {/* Center - Score */}
                 <div className="text-center">
-                    <h2 className="text-4xl font-bold tracking-wider text-green-400 drop-shadow-[0_0_10px_rgba(74,222,128,0.8)]">
+                    <h2 className="text-4xl font-bold tracking-wider text-red-400 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
                         {score}
                     </h2>
                     <p className="text-sm text-gray-400">SCORE</p>
@@ -470,7 +470,7 @@ const ShopScreen: React.FC = () => {
             <div
                 key={skin.id}
                 className={`p-4 rounded-lg border-2 transition-all ${isSelected
-                        ? 'border-green-500 bg-green-500/10'
+                        ? 'border-red-500 bg-red-500/10'
                         : skin.owned
                             ? 'border-gray-600 bg-gray-800/50 hover:border-gray-500'
                             : 'border-gray-700 bg-gray-900/50'
@@ -496,7 +496,7 @@ const ShopScreen: React.FC = () => {
 
                 {skin.owned ? (
                     isSelected ? (
-                        <span className="text-green-400 text-sm">EQUIPPED</span>
+                        <span className="text-red-400 text-sm">EQUIPPED</span>
                     ) : (
                         <button
                             onClick={() => type === 'ball' ? selectBallSkin(skin.id) : selectBackgroundSkin(skin.id)}
@@ -664,7 +664,7 @@ const InfoScreen: React.FC = () => {
                     <div>
                         <h3 className="text-xl font-bold text-white mb-3">SCORING</h3>
                         <div className="space-y-2 text-gray-300">
-                            <p><span className="text-green-400">+1 point</span> for each platform cleared</p>
+                            <p><span className="text-red-400">+1 point</span> for each platform cleared</p>
                             <p><span className="text-yellow-400">Coins</span> can be collected on platforms</p>
                             <p>Use coins to buy skins in the <span className="text-yellow-400">Shop</span></p>
                         </div>
